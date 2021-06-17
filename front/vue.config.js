@@ -1,7 +1,14 @@
-const path = require("path");
+const path = require("path")
 
 module.exports = {
-    devServer: { proxy: 'http://localhost:8000' },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8000',
+                changeOrigin: true
+            }
+        }
+    },
 
     outputDir: path.resolve(__dirname, "../back/public/dist"),
     publicPath: '/dist',

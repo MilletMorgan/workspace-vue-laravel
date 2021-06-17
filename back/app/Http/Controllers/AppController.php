@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class AppController extends Controller
 {
-    public function get()
+    /**
+     * @return Response
+     */
+    public function index()
     {
-        return view('app');
+        return new Response();
     }
 }
