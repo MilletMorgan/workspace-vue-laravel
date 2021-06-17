@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use http\Env\Response;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 
 class AppController extends Controller
 {
     /**
-     * @return Response
+     * @return JsonResponse
      */
-    public function index()
+    public function getUser(): JsonResponse
     {
-        return new Response();
+        return response()->json([
+            'name' => 'Abigail',
+            'state' => 'CA',
+        ]);
     }
 }

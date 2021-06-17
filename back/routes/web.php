@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::any('/{any?}', [ViewController::class, 'app'])
 //    ->where('any','^(?!api).*$');
+
 
 Route::fallback(function() {
     return view('index');

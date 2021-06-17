@@ -10,7 +10,7 @@ module.exports = {
     }
   },
 
-  outputDir: path.resolve(__dirname, "../back/public"),
+  outputDir: path.resolve(__dirname, "../symfony/public"),
   assetsDir: "./dist",
-  indexPath: path.resolve(__dirname, '../back/resources/views/index.html')
+  indexPath: path.resolve(__dirname, '../symfony/templates/index.html')
 }
